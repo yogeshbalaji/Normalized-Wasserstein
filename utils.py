@@ -1,11 +1,14 @@
+import os
 
-def read_file(path):
+def read_file(path, data_root=None):
     f = open(path, 'r')
     contents = f.readlines()
     samples = []
     for cnt in contents:
         cnt = cnt.rstrip()
         path, lab = cnt.split(',')
+        if data_root is not None:
+            path = os.path.join(data_root, path)
         lab = int(lab)
         tup = (path, lab)
         samples.append(tup)

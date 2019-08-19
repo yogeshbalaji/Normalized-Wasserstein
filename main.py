@@ -13,6 +13,7 @@ def parse_arguments():
     """Command line parse."""
     parser = argparse.ArgumentParser()
     parser.add_argument('--data-path', type= str, required=True)
+    parser.add_argument('--data-root', type=str, required=True)
     parser.add_argument('--exp', type= str, default= 'MNIST', help = 'Choose an experiment| MNIST, VISDA')
     parser.add_argument('--alg', type=str, default='dann', help='Choose an algorithm to train the model.')
     parser.add_argument('--epochs', type=int, default=40, help='Number of epochs to train')
@@ -31,10 +32,10 @@ def main(args):
     if args.exp == 'MNIST':
 
         # Forming data_samples
-        s_train = utils.read_file(osp.join(args.data_path, 'source_train.txt'))
-        s_val = utils.read_file(osp.join(args.data_path, 'source_val.txt'))
-        t_train = utils.read_file(osp.join(args.data_path, 'target_train.txt'))
-        t_val = utils.read_file(osp.join(args.data_path, 'target_val.txt'))
+        s_train = utils.read_file(osp.join(args.data_path, 'source_train.txt'), data_root=args.data_root)
+        s_val = utils.read_file(osp.join(args.data_path, 'source_val.txt'), data_root=args.data_root)
+        t_train = utils.read_file(osp.join(args.data_path, 'target_train.txt'), data_root=args.data_root)
+        t_val = utils.read_file(osp.join(args.data_path, 'target_val.txt'), data_root=args.data_root)
         data_samples = {
             'source_train': s_train,
             'source_val': s_val,
