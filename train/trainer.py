@@ -1,96 +1,39 @@
 import torch
 import torch.nn as nn
 import datasets
-import torchvision.transforms as T
 import models
 import torch.optim as optim
 import torch.nn.functional as F
-import utils
 import numpy as np
-from torch.utils.data import DataLoader
+from pathlib import Path
 
 
 class Trainer(object):
-    def __init__(self, args, data_samples, nclasses=10):
+    def __init__(self, args):
 
         self.args = args
+        Path(args.saver_root).mkdir(parents=True, exist_ok=True)
 
-        ###############################
-        # Create dataloaders
+        if args.exp == 'MNIST':
+            self.log('Running MNIST -> MNIST-M')
+            dataloders = datasets.form_mnist_dataset(args)
+        elif args.exp == 'VISDA':
+            # TODO: Include VISDA
+            pass
 
-        dataset_mean = (0.5, 0.5, 0.5)
-        dataset_std = (0.5, 0.5, 0.5)
-
-        source_transform = T.Compose([
-            T.ToTensor(),
-            T.Normalize(mean=dataset_mean,
-                        std=dataset_std)
-        ])
-        target_transform_train = T.Compose([
-            T.RandomCrop((28)),
-            T.ToTensor(),
-            T.Normalize(mean=dataset_mean,
-                        std=dataset_std)
-        ])
-        target_transform_test = T.Compose([
-            T.CenterCrop((28)),
-            T.ToTensor(),
-            T.Normalize(mean=dataset_mean,
-                        std=dataset_std)
-        ])
-
-        dat_s_train = datasets.ImageFolder(data_samples['source_train'],
-                                                  transform=source_transform)
-        dat_s_val = datasets.ImageFolder(data_samples['source_val'],
-                                                  transform=source_transform)
-        dat_t_train = datasets.ImageFolder(data_samples['target_train'],
-                                                  transform=target_transform_train)
-        dat_t_val = datasets.ImageFolder(data_samples['target_val'],
-                                                transform=target_transform_test)
-
-        self.s_trainloader = DataLoader(dataset=dat_s_train,
-                                        batch_size=args.batch_size,
-                                        shuffle=True,
-                                        drop_last=True,
-                                        num_workers=args.workers)
-        self.s_valloader = DataLoader(dataset=dat_s_val,
-                                      batch_size=args.batch_size,
-                                      shuffle=False,
-                                      drop_last=False,
-                                      num_workers=args.workers)
-        self.t_trainloader = DataLoader(dataset=dat_t_train,
-                                        batch_size=args.batch_size,
-                                        shuffle=True,
-                                        drop_last=True,
-                                        num_workers=args.workers)
-        self.t_valloader = DataLoader(dataset=dat_t_val,
-                                      batch_size=args.batch_size,
-                                      shuffle=False,
-                                      drop_last=False,
-                                      num_workers=args.workers)
-
-        ## For NW, use classwise dataloader
-        data_samples_classwise = utils.form_samples_classwise(data_samples['source_train'],
-                                                              nclasses)
-        self.s_trainloader_classwise = [
-            DataLoader(
-                datasets.ImageFolder(data_samples_classwise[cl],
-                                     transform=source_transform),
-                batch_size=args.batch_size,
-                shuffle=True,
-                drop_last=True,
-                num_workers=args.workers) for cl in range(nclasses)
-        ]
+        self.s_trainloader = dataloders['s_train']
+        self.s_valloader = dataloders['s_val']
+        self.t_trainloader = dataloders['t_train']
+        self.t_valloader = dataloders['t_val']
+        self.s_trainloader_classwise = dataloders['s_classwise']
+        nclasses = self.nclasses = dataloders['nclasses']
 
         self.s_classwise_iterators = []
         for i in range(len(self.s_trainloader_classwise)):
             self.s_classwise_iterators.append(iter(self.s_trainloader_classwise[i]))
 
-        self.nclasses = nclasses
-
         ###############################
         # Create models
-
         self.netF = models._netF().cuda()
         self.netC = models._netC(self.nclasses).cuda()
         if args.alg == 'wasserstein' or args.alg == 'NW':
@@ -114,6 +57,13 @@ class Trainer(object):
                 self.pi = nn.Parameter(torch.FloatTensor(nclasses).fill_(1.0 / nclasses).cuda())
                 self.optimizerPi = optim.SGD(iter([self.pi]), lr=args.lrPi)
 
+    def log(self, message):
+        print(message)
+        message = message + '\n'
+        f = open("{}/log.txt".format(self.args.saver_root), "a+")
+        f.write(message)
+        f.close()
+
     def _zero_grad(self):
         self.optimizerF.zero_grad()
         self.optimizerC.zero_grad()
@@ -134,7 +84,7 @@ class Trainer(object):
         self.netF.eval()
         self.netC.eval()
 
-        ### Validating source domain
+        # Validating source domain
         correct = [0] * self.nclasses
         total = [0] * self.nclasses
 
@@ -155,10 +105,12 @@ class Trainer(object):
         train_acc_classwise = np.array([float(correct[j] * 100)/total[j] for j in range(self.nclasses)])
         train_acc_mean = train_acc_classwise.mean()
 
-        print('Source validation accuracy: {}'.format(train_acc_mean))
+        msg = 'Source validation accuracy: {}'.format(train_acc_mean)
+        self.log(msg)
+        print('Classwise accuracy')
         print(train_acc_classwise)
 
-        ### Validating target domain
+        # Validating target domain
         correct = [0] * self.nclasses
         total = [0] * self.nclasses
 
@@ -179,19 +131,16 @@ class Trainer(object):
         train_acc_classwise = np.array([float(correct[j] * 100) / total[j] for j in range(self.nclasses)])
         train_acc_mean = train_acc_classwise.mean()
 
-        print('Target validation accuracy: {}'.format(train_acc_mean))
+        msg = 'Target validation accuracy: {}'.format(train_acc_mean)
+        self.log(msg)
+        print('Classwise accuracy')
         print(train_acc_classwise)
         print('#########################################')
 
-
-
     def train(self):
-
         curr_iter = 0
-
         for epoch in range(self.args.epochs):
-            print('Starting epoch {} ...'.format(epoch))
-
+            self.log('Starting epoch {} ...'.format(epoch))
             self.netF.train()
             self.netC.train()
             self.netD.train()
@@ -232,7 +181,6 @@ class Trainer(object):
                     else:
                         s_logits_dom = self.netD(s_feat)
 
-
                 if self.args.alg == 'dann':
 
                     s_dom_loss = F.cross_entropy(s_logits_dom, s_labels_dom)
@@ -251,7 +199,6 @@ class Trainer(object):
 
                     # Default params for Wasserstein loss
                     gamma = 1
-                    burn_out = 10000000
                     clamp_val = 0.01
                     critic_iters = 10
 
@@ -274,46 +221,38 @@ class Trainer(object):
                         s_logits_dom.backward(one, retain_graph=True)
                         self.optimizerPi.step()
 
-                    if curr_iter == burn_out:
-                        print('Burn out over')
-
-                    if curr_iter % critic_iters == 0 or curr_iter < burn_out:
-                        self._zero_grad()
-
-                        if curr_iter < burn_out and curr_iter % critic_iters > 0:
-                            class_loss.backward()
-                            self.optimizerC.step()
-                            self.optimizerF.step()
-
-                        else:
-                            (gamma * s_logits_dom).backward(one, retain_graph=True)
-                            (gamma * t_logits_dom).backward(mone)
-                            class_loss.backward()
-                            self.optimizerC.step()
-                            self.optimizerF.step()
+                    self._zero_grad()
+                    if curr_iter % critic_iters > 0:
+                        class_loss.backward()
+                        self.optimizerC.step()
+                        self.optimizerF.step()
+                    else:
+                        (gamma * s_logits_dom).backward(one, retain_graph=True)
+                        (gamma * t_logits_dom).backward(mone)
+                        class_loss.backward()
+                        self.optimizerC.step()
+                        self.optimizerF.step()
 
                 elif self.args.alg == 'sourceonly':
                     class_loss.backward()
                     self.optimizerC.step()
                     self.optimizerF.step()
 
-
                 # Logging the results
-                if i % 100 == 0:
+                if i % self.args.log_interval == 0:
                     if self.args.alg == 'NW':
                         print('Mode prob')
                         print(F.softmax(self.pi, dim=0))
 
                     if self.args.alg == 'sourceonly':
-                        print('[{}/{}] \t Classification loss: {}'.format(i * len(s_inputs),
-                                                                          len(self.t_trainloader.dataset),
-                                                                          class_loss.item()))
+                        self.log('[{}/{}] \t Classification loss: {}'.format(i * len(s_inputs),
+                                                                             len(self.t_trainloader.dataset),
+                                                                             class_loss.item()))
                     else:
-                        print('[{}/{}] \t Classification loss: {}, '
-                              'Domain loss: {}'.format(i * len(s_inputs),
-                                                        len(self.t_trainloader.dataset),
-                                                        class_loss.item(),
-                                                        dom_loss.item()))
+                        self.log('[{}/{}] \t Classification loss: {}, '
+                                 'Domain loss: {}'.format(i * len(s_inputs),
+                                                       len(self.t_trainloader.dataset),
+                                                       class_loss.item(),
+                                                       dom_loss.item()))
 
             self.test()
-
