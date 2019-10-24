@@ -1,0 +1,22 @@
+{
+  "dataset": "CIFAR_CelebA",
+  "CIFAR_DIR": "/vulcan/scratch/yogesh22/data/CIFAR/cifar-10-batches-py/",
+  "CELEBA_DIR": "/vulcan/scratch/yogesh22/data/celeba_imgs_32/",
+  "BATCH_SIZE": 64,
+  "GEN_BS_MULTIPLE": 2,
+  "ITERS": 100000,
+  "DIM_G": 128,
+  "DIM_D": 128,
+  "NORMALIZATION_G": true,
+  "NORMALIZATION_D": false,
+  "OUTPUT_DIM": 3072,
+  "LR": 2e-4,
+  "DECAY": true,
+  "N_CRITIC": 5,
+  "INCEPTION_FREQUENCY": 5000,
+  "classes_to_load": -1,
+  "mode_frac": [1.0, 1.0],
+  "num_modes": 2,
+  "log_dir": "results/learnPI_CIFAR_CelebA",
+  "alg": "learnPI"
+}

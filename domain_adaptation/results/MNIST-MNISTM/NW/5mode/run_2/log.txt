@@ -1,0 +1,363 @@
+Running MNIST -> MNIST-M
+Starting epoch 0 ...
+[0/17359] 	 Classification loss: 1.6083767414093018, Domain loss: -0.004196903668344021
+[6400/17359] 	 Classification loss: 1.0603454113006592, Domain loss: -0.3348996043205261
+[12800/17359] 	 Classification loss: 0.48891758918762207, Domain loss: -1.306437373161316
+Source validation accuracy: 81.1791397524375
+Target validation accuracy: 49.91498434532531
+Starting epoch 1 ...
+[0/17359] 	 Classification loss: 0.46018168330192566, Domain loss: -1.5957064628601074
+[6400/17359] 	 Classification loss: 0.2916487455368042, Domain loss: -1.1182572841644287
+[12800/17359] 	 Classification loss: 0.22758932411670685, Domain loss: -0.9914520978927612
+Source validation accuracy: 93.38206934841932
+Target validation accuracy: 55.212993967038564
+Starting epoch 2 ...
+[0/17359] 	 Classification loss: 0.2451174557209015, Domain loss: -0.9230512380599976
+[6400/17359] 	 Classification loss: 0.16047453880310059, Domain loss: -1.0469998121261597
+[12800/17359] 	 Classification loss: 0.1816793531179428, Domain loss: -0.7359950542449951
+Source validation accuracy: 94.940128501086
+Target validation accuracy: 56.57539554732832
+Starting epoch 3 ...
+[0/17359] 	 Classification loss: 0.2190101146697998, Domain loss: -0.7291921377182007
+[6400/17359] 	 Classification loss: 0.13335727155208588, Domain loss: -0.6983352303504944
+[12800/17359] 	 Classification loss: 0.1578095704317093, Domain loss: -0.7039655447006226
+Source validation accuracy: 96.61620085683062
+Target validation accuracy: 59.30357201407162
+Starting epoch 4 ...
+[0/17359] 	 Classification loss: 0.1367732733488083, Domain loss: -0.7662668228149414
+[6400/17359] 	 Classification loss: 0.1215386614203453, Domain loss: -0.6150503754615784
+[12800/17359] 	 Classification loss: 0.06595729291439056, Domain loss: -0.6344074606895447
+Source validation accuracy: 96.79944552064768
+Target validation accuracy: 60.003129183528095
+Starting epoch 5 ...
+[0/17359] 	 Classification loss: 0.08284987509250641, Domain loss: -0.5602880120277405
+[6400/17359] 	 Classification loss: 0.10474428534507751, Domain loss: -0.5233400464057922
+[12800/17359] 	 Classification loss: 0.15164825320243835, Domain loss: -0.4852227568626404
+Source validation accuracy: 97.41502599075477
+Target validation accuracy: 61.447720720352756
+Starting epoch 6 ...
+[0/17359] 	 Classification loss: 0.10179015249013901, Domain loss: -0.4139247536659241
+[6400/17359] 	 Classification loss: 0.06892352551221848, Domain loss: -0.4788621962070465
+[12800/17359] 	 Classification loss: 0.09412327408790588, Domain loss: -0.39107751846313477
+Source validation accuracy: 97.3080780871421
+Target validation accuracy: 61.53940473062509
+Starting epoch 7 ...
+[0/17359] 	 Classification loss: 0.047403734177351, Domain loss: -0.3913112282752991
+[6400/17359] 	 Classification loss: 0.0704614669084549, Domain loss: -0.3719130754470825
+[12800/17359] 	 Classification loss: 0.04971974343061447, Domain loss: -0.36184680461883545
+Source validation accuracy: 97.93048990828055
+Target validation accuracy: 62.55011767289756
+Starting epoch 8 ...
+[0/17359] 	 Classification loss: 0.0851706936955452, Domain loss: -0.33198457956314087
+[6400/17359] 	 Classification loss: 0.07991534471511841, Domain loss: -0.25650614500045776
+[12800/17359] 	 Classification loss: 0.04330673813819885, Domain loss: -0.3289525508880615
+Source validation accuracy: 98.46246626999489
+Target validation accuracy: 63.96427075403243
+Starting epoch 9 ...
+[0/17359] 	 Classification loss: 0.08477731049060822, Domain loss: -0.2812930941581726
+[6400/17359] 	 Classification loss: 0.03363604098558426, Domain loss: -0.2916771471500397
+[12800/17359] 	 Classification loss: 0.0547005832195282, Domain loss: -0.25782284140586853
+Source validation accuracy: 98.12374189685447
+Target validation accuracy: 63.95730114363234
+Starting epoch 10 ...
+[0/17359] 	 Classification loss: 0.05965937301516533, Domain loss: -0.22949546575546265
+[6400/17359] 	 Classification loss: 0.029072903096675873, Domain loss: -0.25877830386161804
+[12800/17359] 	 Classification loss: 0.06334184110164642, Domain loss: -0.2370801717042923
+Source validation accuracy: 98.6594027539885
+Target validation accuracy: 65.32446916821218
+Starting epoch 11 ...
+[0/17359] 	 Classification loss: 0.04928296059370041, Domain loss: -0.2154528945684433
+[6400/17359] 	 Classification loss: 0.023565545678138733, Domain loss: -0.22179199755191803
+[12800/17359] 	 Classification loss: 0.02514469623565674, Domain loss: -0.2050713449716568
+Source validation accuracy: 98.69032319110617
+Target validation accuracy: 66.77235573857067
+Starting epoch 12 ...
+[0/17359] 	 Classification loss: 0.03129633143544197, Domain loss: -0.2198091745376587
+[6400/17359] 	 Classification loss: 0.026473455131053925, Domain loss: -0.21892601251602173
+[12800/17359] 	 Classification loss: 0.05074624717235565, Domain loss: -0.18015918135643005
+Source validation accuracy: 98.53850164474656
+Target validation accuracy: 67.24986240957232
+Starting epoch 13 ...
+[0/17359] 	 Classification loss: 0.03482885658740997, Domain loss: -0.16789856553077698
+[6400/17359] 	 Classification loss: 0.05917733535170555, Domain loss: -0.18162117898464203
+[12800/17359] 	 Classification loss: 0.06795770674943924, Domain loss: -0.18100033700466156
+Source validation accuracy: 98.67438688311461
+Target validation accuracy: 66.45405397938585
+Starting epoch 14 ...
+[0/17359] 	 Classification loss: 0.10087238252162933, Domain loss: -0.17325322329998016
+[6400/17359] 	 Classification loss: 0.05452223867177963, Domain loss: -0.15846797823905945
+[12800/17359] 	 Classification loss: 0.04036753624677658, Domain loss: -0.16983431577682495
+Source validation accuracy: 99.13426156864071
+Target validation accuracy: 67.35629480224608
+Starting epoch 15 ...
+[0/17359] 	 Classification loss: 0.035638488829135895, Domain loss: -0.15708662569522858
+[6400/17359] 	 Classification loss: 0.030526677146553993, Domain loss: -0.1451006531715393
+[12800/17359] 	 Classification loss: 0.01244945265352726, Domain loss: -0.14231713116168976
+Source validation accuracy: 98.7803326306175
+Target validation accuracy: 67.75046450886381
+Starting epoch 16 ...
+[0/17359] 	 Classification loss: 0.07707086950540543, Domain loss: -0.116207554936409
+[6400/17359] 	 Classification loss: 0.018567726016044617, Domain loss: -0.1443333625793457
+[12800/17359] 	 Classification loss: 0.015520281158387661, Domain loss: -0.12258432060480118
+Source validation accuracy: 98.5475160254933
+Target validation accuracy: 67.9281605326963
+Starting epoch 17 ...
+[0/17359] 	 Classification loss: 0.02695215865969658, Domain loss: -0.14429612457752228
+[6400/17359] 	 Classification loss: 0.023059068247675896, Domain loss: -0.1413063406944275
+[12800/17359] 	 Classification loss: 0.027873624116182327, Domain loss: -0.14195296168327332
+Source validation accuracy: 99.02902408563367
+Target validation accuracy: 67.8477615359557
+Starting epoch 18 ...
+[0/17359] 	 Classification loss: 0.018528247252106667, Domain loss: -0.1337553858757019
+[6400/17359] 	 Classification loss: 0.04038413614034653, Domain loss: -0.1239679753780365
+[12800/17359] 	 Classification loss: 0.04107159376144409, Domain loss: -0.14107875525951385
+Source validation accuracy: 98.92942186042289
+Target validation accuracy: 70.09439971708028
+Starting epoch 19 ...
+[0/17359] 	 Classification loss: 0.0158546082675457, Domain loss: -0.12837138772010803
+[6400/17359] 	 Classification loss: 0.046339988708496094, Domain loss: -0.16850893199443817
+[12800/17359] 	 Classification loss: 0.022005409002304077, Domain loss: -0.16127660870552063
+Source validation accuracy: 98.82363735933274
+Target validation accuracy: 69.1964778070355
+Starting epoch 20 ...
+[0/17359] 	 Classification loss: 0.014140764251351357, Domain loss: -0.1465490460395813
+[6400/17359] 	 Classification loss: 0.02162962779402733, Domain loss: -0.1635405719280243
+[12800/17359] 	 Classification loss: 0.04744407534599304, Domain loss: -0.15688690543174744
+Source validation accuracy: 99.05267889282375
+Target validation accuracy: 70.47530035416052
+Starting epoch 21 ...
+[0/17359] 	 Classification loss: 0.04417790099978447, Domain loss: -0.15341678261756897
+[6400/17359] 	 Classification loss: 0.02713315561413765, Domain loss: -0.1590120494365692
+[12800/17359] 	 Classification loss: 0.018133511766791344, Domain loss: -0.16166500747203827
+Source validation accuracy: 99.21758378317716
+Target validation accuracy: 70.46521992527474
+Starting epoch 22 ...
+[0/17359] 	 Classification loss: 0.02713417075574398, Domain loss: -0.16602596640586853
+[6400/17359] 	 Classification loss: 0.009663800708949566, Domain loss: -0.15185561776161194
+[12800/17359] 	 Classification loss: 0.04485635831952095, Domain loss: -0.15915292501449585
+Source validation accuracy: 98.91553046362006
+Target validation accuracy: 70.62974663960469
+Starting epoch 23 ...
+[0/17359] 	 Classification loss: 0.02070363238453865, Domain loss: -0.15524041652679443
+[6400/17359] 	 Classification loss: 0.04860207065939903, Domain loss: -0.14875108003616333
+[12800/17359] 	 Classification loss: 0.04257194697856903, Domain loss: -0.15167894959449768
+Source validation accuracy: 99.30928278416374
+Target validation accuracy: 70.02837453899137
+Starting epoch 24 ...
+[0/17359] 	 Classification loss: 0.09122386574745178, Domain loss: -0.1551314890384674
+[6400/17359] 	 Classification loss: 0.024242516607046127, Domain loss: -0.143912672996521
+[12800/17359] 	 Classification loss: 0.018865585327148438, Domain loss: -0.16782456636428833
+Source validation accuracy: 99.35126251321688
+Target validation accuracy: 71.35397761282012
+Starting epoch 25 ...
+[0/17359] 	 Classification loss: 0.024724407121539116, Domain loss: -0.15903779864311218
+[6400/17359] 	 Classification loss: 0.017609985545277596, Domain loss: -0.14667163789272308
+[12800/17359] 	 Classification loss: 0.013232302851974964, Domain loss: -0.16267940402030945
+Source validation accuracy: 99.16199455117751
+Target validation accuracy: 72.70524802582915
+Starting epoch 26 ...
+[0/17359] 	 Classification loss: 0.01838698983192444, Domain loss: -0.14440765976905823
+[6400/17359] 	 Classification loss: 0.024018585681915283, Domain loss: -0.16893652081489563
+[12800/17359] 	 Classification loss: 0.030814439058303833, Domain loss: -0.14304803311824799
+Source validation accuracy: 99.11734396366977
+Target validation accuracy: 70.58820566399098
+Starting epoch 27 ...
+[0/17359] 	 Classification loss: 0.018304210156202316, Domain loss: -0.15674641728401184
+[6400/17359] 	 Classification loss: 0.0222794059664011, Domain loss: -0.14045853912830353
+[12800/17359] 	 Classification loss: 0.02074049599468708, Domain loss: -0.16962707042694092
+Source validation accuracy: 99.55361381925007
+Target validation accuracy: 71.24227253730689
+Starting epoch 28 ...
+[0/17359] 	 Classification loss: 0.01665571890771389, Domain loss: -0.15743505954742432
+[6400/17359] 	 Classification loss: 0.006589150056242943, Domain loss: -0.14721013605594635
+[12800/17359] 	 Classification loss: 0.02003002166748047, Domain loss: -0.15416719019412994
+Source validation accuracy: 99.42725990848184
+Target validation accuracy: 72.2316993530196
+Starting epoch 29 ...
+[0/17359] 	 Classification loss: 0.014877542853355408, Domain loss: -0.14378026127815247
+[6400/17359] 	 Classification loss: 0.008213096298277378, Domain loss: -0.16457971930503845
+[12800/17359] 	 Classification loss: 0.040103983134031296, Domain loss: -0.14468516409397125
+Source validation accuracy: 99.3037589617114
+Target validation accuracy: 71.39271446429154
+Starting epoch 30 ...
+[0/17359] 	 Classification loss: 0.009525848552584648, Domain loss: -0.1505385935306549
+[6400/17359] 	 Classification loss: 0.006053249817341566, Domain loss: -0.14671555161476135
+[12800/17359] 	 Classification loss: 0.008577114902436733, Domain loss: -0.14150230586528778
+Source validation accuracy: 99.17305384311297
+Target validation accuracy: 71.97749537954732
+Starting epoch 31 ...
+[0/17359] 	 Classification loss: 0.013324514962732792, Domain loss: -0.14837093651294708
+[6400/17359] 	 Classification loss: 0.020656127482652664, Domain loss: -0.13822579383850098
+[12800/17359] 	 Classification loss: 0.008097370155155659, Domain loss: -0.1363416463136673
+Source validation accuracy: 99.36195724333922
+Target validation accuracy: 72.53562431554903
+Starting epoch 32 ...
+[0/17359] 	 Classification loss: 0.012136506848037243, Domain loss: -0.1260465383529663
+[6400/17359] 	 Classification loss: 0.012537192553281784, Domain loss: -0.15316051244735718
+[12800/17359] 	 Classification loss: 0.026579588651657104, Domain loss: -0.13704149425029755
+Source validation accuracy: 99.500695445705
+Target validation accuracy: 72.12682984616927
+Starting epoch 33 ...
+[0/17359] 	 Classification loss: 0.007812991738319397, Domain loss: -0.1322384476661682
+[6400/17359] 	 Classification loss: 0.008129137568175793, Domain loss: -0.13354603946208954
+[12800/17359] 	 Classification loss: 0.01752425916492939, Domain loss: -0.12377970665693283
+Source validation accuracy: 99.40580899013756
+Target validation accuracy: 73.56321650709754
+Starting epoch 34 ...
+[0/17359] 	 Classification loss: 0.032947737723588943, Domain loss: -0.13860207796096802
+[6400/17359] 	 Classification loss: 0.003650600090622902, Domain loss: -0.11865629255771637
+[12800/17359] 	 Classification loss: 0.008193934336304665, Domain loss: -0.15079738199710846
+Source validation accuracy: 99.56734396964012
+Target validation accuracy: 72.14924089846451
+Starting epoch 35 ...
+[0/17359] 	 Classification loss: 0.006291812751442194, Domain loss: -0.14032383263111115
+[6400/17359] 	 Classification loss: 0.037183523178100586, Domain loss: -0.13362732529640198
+[12800/17359] 	 Classification loss: 0.004518481902778149, Domain loss: -0.13069167733192444
+Source validation accuracy: 99.69682387688961
+Target validation accuracy: 72.15628590689852
+Starting epoch 36 ...
+[0/17359] 	 Classification loss: 0.005899980664253235, Domain loss: -0.13420070707798004
+[6400/17359] 	 Classification loss: 0.003828655928373337, Domain loss: -0.14005650579929352
+[12800/17359] 	 Classification loss: 0.01472912821918726, Domain loss: -0.11564837396144867
+Source validation accuracy: 99.47994357975695
+Target validation accuracy: 74.03287998254625
+Starting epoch 37 ...
+[0/17359] 	 Classification loss: 0.007364225573837757, Domain loss: -0.12209808826446533
+[6400/17359] 	 Classification loss: 0.032280683517456055, Domain loss: -0.11924265325069427
+[12800/17359] 	 Classification loss: 0.010308903641998768, Domain loss: -0.13067129254341125
+Source validation accuracy: 99.37130611466905
+Target validation accuracy: 73.1254454806511
+Starting epoch 38 ...
+[0/17359] 	 Classification loss: 0.009495321661233902, Domain loss: -0.11376115679740906
+[6400/17359] 	 Classification loss: 0.00264021847397089, Domain loss: -0.1195896714925766
+[12800/17359] 	 Classification loss: 0.012136626988649368, Domain loss: -0.13005703687667847
+Source validation accuracy: 99.6628680195042
+Target validation accuracy: 73.07653207622823
+Starting epoch 39 ...
+[0/17359] 	 Classification loss: 0.02678072266280651, Domain loss: -0.10425151884555817
+[6400/17359] 	 Classification loss: 0.010883933864533901, Domain loss: -0.11912373453378677
+[12800/17359] 	 Classification loss: 0.0131556186825037, Domain loss: -0.10365808010101318
+Source validation accuracy: 99.54871594406357
+Target validation accuracy: 72.06972344938188
+Starting epoch 40 ...
+[0/17359] 	 Classification loss: 0.008963800966739655, Domain loss: -0.11586122959852219
+[6400/17359] 	 Classification loss: 0.0064793843775987625, Domain loss: -0.11419174075126648
+[12800/17359] 	 Classification loss: 0.035240400582551956, Domain loss: -0.10791492462158203
+Source validation accuracy: 99.53418695296412
+Target validation accuracy: 72.83288953242779
+Starting epoch 41 ...
+[0/17359] 	 Classification loss: 0.003347015008330345, Domain loss: -0.11730200797319412
+[6400/17359] 	 Classification loss: 0.012016192078590393, Domain loss: -0.11263862997293472
+[12800/17359] 	 Classification loss: 0.03123929724097252, Domain loss: -0.1226947158575058
+Source validation accuracy: 99.69682387688961
+Target validation accuracy: 74.39937074841616
+Starting epoch 42 ...
+[0/17359] 	 Classification loss: 0.017360594123601913, Domain loss: -0.11615872383117676
+[6400/17359] 	 Classification loss: 0.006264796946197748, Domain loss: -0.1253061592578888
+[12800/17359] 	 Classification loss: 0.012202580459415913, Domain loss: -0.11011841893196106
+Source validation accuracy: 99.5156795748311
+Target validation accuracy: 74.34076381228114
+Starting epoch 43 ...
+[0/17359] 	 Classification loss: 0.0047130947932600975, Domain loss: -0.10196219384670258
+[6400/17359] 	 Classification loss: 0.0027257781475782394, Domain loss: -0.116661436855793
+[12800/17359] 	 Classification loss: 0.016090720891952515, Domain loss: -0.1024971455335617
+Source validation accuracy: 99.41552242328054
+Target validation accuracy: 72.67383995643573
+Starting epoch 44 ...
+[0/17359] 	 Classification loss: 0.007404547184705734, Domain loss: -0.11557871103286743
+[6400/17359] 	 Classification loss: 0.0024467073380947113, Domain loss: -0.10554849356412888
+[12800/17359] 	 Classification loss: 0.011747149750590324, Domain loss: -0.10175259411334991
+Source validation accuracy: 99.44678656308095
+Target validation accuracy: 73.97818001966615
+Starting epoch 45 ...
+[0/17359] 	 Classification loss: 0.0048760175704956055, Domain loss: -0.10924442112445831
+[6400/17359] 	 Classification loss: 0.0020010750740766525, Domain loss: -0.10943180322647095
+[12800/17359] 	 Classification loss: 0.0029952237382531166, Domain loss: -0.10505186021327972
+Source validation accuracy: 99.43370321908712
+Target validation accuracy: 73.9319496571234
+Starting epoch 46 ...
+[0/17359] 	 Classification loss: 0.010605026967823505, Domain loss: -0.10819252580404282
+[6400/17359] 	 Classification loss: 0.008474116213619709, Domain loss: -0.12067022919654846
+[12800/17359] 	 Classification loss: 0.008263939060270786, Domain loss: -0.08915302157402039
+Source validation accuracy: 99.5965840573822
+Target validation accuracy: 74.21807052258637
+Starting epoch 47 ...
+[0/17359] 	 Classification loss: 0.01178327202796936, Domain loss: -0.11731056869029999
+[6400/17359] 	 Classification loss: 0.003094792366027832, Domain loss: -0.09899890422821045
+[12800/17359] 	 Classification loss: 0.0017731599509716034, Domain loss: -0.09473050385713577
+Source validation accuracy: 99.69896857639148
+Target validation accuracy: 73.86625229416612
+Starting epoch 48 ...
+[0/17359] 	 Classification loss: 0.012696150690317154, Domain loss: -0.10265914350748062
+[6400/17359] 	 Classification loss: 0.01264827698469162, Domain loss: -0.09252273291349411
+[12800/17359] 	 Classification loss: 0.027036873623728752, Domain loss: -0.10104858875274658
+Source validation accuracy: 99.5626281999968
+Target validation accuracy: 74.90470350768135
+Starting epoch 49 ...
+[0/17359] 	 Classification loss: 0.008247184567153454, Domain loss: -0.10239710658788681
+[6400/17359] 	 Classification loss: 0.007100241258740425, Domain loss: -0.10898822546005249
+[12800/17359] 	 Classification loss: 0.01023673452436924, Domain loss: -0.09672079235315323
+Source validation accuracy: 99.7625908921585
+Target validation accuracy: 74.8805899154427
+Starting epoch 50 ...
+[0/17359] 	 Classification loss: 0.005603357218205929, Domain loss: -0.11168156564235687
+[6400/17359] 	 Classification loss: 0.009358491748571396, Domain loss: -0.098775714635849
+[12800/17359] 	 Classification loss: 0.005356835201382637, Domain loss: -0.09840121865272522
+Source validation accuracy: 99.42772425860812
+Target validation accuracy: 74.61945271848806
+Starting epoch 51 ...
+[0/17359] 	 Classification loss: 0.003102298825979233, Domain loss: -0.1043049767613411
+[6400/17359] 	 Classification loss: 0.009278311394155025, Domain loss: -0.08627261221408844
+[12800/17359] 	 Classification loss: 0.01579875685274601, Domain loss: -0.1046353355050087
+Source validation accuracy: 99.53553281175662
+Target validation accuracy: 73.66926105843073
+Starting epoch 52 ...
+[0/17359] 	 Classification loss: 0.0033414047211408615, Domain loss: -0.09964544326066971
+[6400/17359] 	 Classification loss: 0.010943693108856678, Domain loss: -0.10210566222667694
+[12800/17359] 	 Classification loss: 0.008475776761770248, Domain loss: -0.09144604951143265
+Source validation accuracy: 99.41552242328054
+Target validation accuracy: 74.21537875923005
+Starting epoch 53 ...
+[0/17359] 	 Classification loss: 0.0035161199048161507, Domain loss: -0.10413192212581635
+[6400/17359] 	 Classification loss: 0.02678598463535309, Domain loss: -0.09369640052318573
+[12800/17359] 	 Classification loss: 0.0075257085263729095, Domain loss: -0.08261041343212128
+Source validation accuracy: 99.5186152067857
+Target validation accuracy: 75.12057622488464
+Starting epoch 54 ...
+[0/17359] 	 Classification loss: 0.00327925942838192, Domain loss: -0.09575451165437698
+[6400/17359] 	 Classification loss: 0.007814697921276093, Domain loss: -0.09600042551755905
+[12800/17359] 	 Classification loss: 0.010229316540062428, Domain loss: -0.08878061175346375
+Source validation accuracy: 99.74049316741798
+Target validation accuracy: 75.07814446550049
+Starting epoch 55 ...
+[0/17359] 	 Classification loss: 0.004739764146506786, Domain loss: -0.08605301380157471
+[6400/17359] 	 Classification loss: 0.008335948921740055, Domain loss: -0.07820561528205872
+[12800/17359] 	 Classification loss: 0.00489296019077301, Domain loss: -0.08536095917224884
+Source validation accuracy: 99.66537728081923
+Target validation accuracy: 74.83727882594607
+Starting epoch 56 ...
+[0/17359] 	 Classification loss: 0.004050173796713352, Domain loss: -0.08412572741508484
+[6400/17359] 	 Classification loss: 0.007140098139643669, Domain loss: -0.0960184708237648
+[12800/17359] 	 Classification loss: 0.01566958799958229, Domain loss: -0.08128729462623596
+Source validation accuracy: 99.48465934940029
+Target validation accuracy: 74.91162666058338
+Starting epoch 57 ...
+[0/17359] 	 Classification loss: 0.0036475826054811478, Domain loss: -0.09307892620563507
+[6400/17359] 	 Classification loss: 0.005240045487880707, Domain loss: -0.08146698027849197
+[12800/17359] 	 Classification loss: 0.007973974570631981, Domain loss: -0.0854538232088089
+Source validation accuracy: 99.50755591485022
+Target validation accuracy: 75.61836883473136
+Starting epoch 58 ...
+[0/17359] 	 Classification loss: 0.0031325267627835274, Domain loss: -0.09417819231748581
+[6400/17359] 	 Classification loss: 0.0022895745933055878, Domain loss: -0.0831126794219017
+[12800/17359] 	 Classification loss: 0.01137998141348362, Domain loss: -0.0835035964846611
+Source validation accuracy: 99.35858733248837
+Target validation accuracy: 75.74832212335832
+Starting epoch 59 ...
+[0/17359] 	 Classification loss: 0.0017487145960330963, Domain loss: -0.08457165211439133
+[6400/17359] 	 Classification loss: 0.0017829257994890213, Domain loss: -0.09632847458124161
+[12800/17359] 	 Classification loss: 0.002503807656466961, Domain loss: -0.07735179364681244
+Source validation accuracy: 99.54402103355065
+Target validation accuracy: 75.11583671714922
+Source validation accuracy: 99.57199793045704
+Target validation accuracy: 75.90641348153822
