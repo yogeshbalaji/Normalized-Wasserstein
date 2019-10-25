@@ -31,7 +31,7 @@ Generations produced by two modes of NWGAN:
 
 
 
-Generations produced by two modes of baseline model that does not update pi:
+Generations produced by two modes of baseline model that assumes uniform mode proportion (pi):
 <figure>
 <img src="https://github.com/yogeshbalaji/Normalized-Wasserstein/blob/master/NWGAN/vision/results/fixedPI_CIFAR_CelebA/samples_mode1_99999.png?raw=true" width="250">
 </figure>
@@ -40,5 +40,5 @@ Generations produced by two modes of baseline model that does not update pi:
 </figure>
 
 
-We clearly observe the benefit of updating pi as it makes each generator learn only one mode of the distribution. 
+We clearly observe the benefit of updating mode proprotion(pi) in optimization as it makes each generator learn only one mode of the distribution. 
 This is useful for several applications e.g., in adversarial clustering. Please refer to the [paper](https://arxiv.org/pdf/1902.00415.pdf) for more details.
