@@ -22,26 +22,22 @@ To run, this baseline, run
 
 ## Results
 Generations produced by two modes of NWGAN:
-<p float="left">
 <figure>
-<img src="https://github.com/yogeshbalaji/Normalized-Wasserstein/blob/master/NWGAN/vision/results/learnPI_CIFAR_CelebA/samples_mode0_99999.png?raw=true" width="150">
+<img src="https://github.com/yogeshbalaji/Normalized-Wasserstein/blob/master/NWGAN/vision/results/learnPI_CIFAR_CelebA/samples_mode0_99999.png?raw=true" width="250">
 </figure>
 <figure>
-<img src="https://github.com/yogeshbalaji/Normalized-Wasserstein/blob/master/NWGAN/vision/results/learnPI_CIFAR_CelebA/samples_mode1_99999.png?raw=true" width="150">
+<img src="https://github.com/yogeshbalaji/Normalized-Wasserstein/blob/master/NWGAN/vision/results/learnPI_CIFAR_CelebA/samples_mode1_99999.png?raw=true" width="250">
 </figure>
-</p>
+
 
 
 Generations produced by two modes of baseline model that does not update pi:
-<p float="left">
 <figure>
-<img src="https://github.com/yogeshbalaji/Normalized-Wasserstein/blob/master/NWGAN/vision/results/fixedPI_CIFAR_CelebA/samples_mode1_99999.png?raw=true" width="150">
+<img src="https://github.com/yogeshbalaji/Normalized-Wasserstein/blob/master/NWGAN/vision/results/fixedPI_CIFAR_CelebA/samples_mode1_99999.png?raw=true" width="250">
 </figure>
 <figure>
-<img src="https://github.com/yogeshbalaji/Normalized-Wasserstein/blob/master/NWGAN/vision/results/fixedPI_CIFAR_CelebA/samples_mode0_99999.png?raw=true" width="150">
+<img src="https://github.com/yogeshbalaji/Normalized-Wasserstein/blob/master/NWGAN/vision/results/fixedPI_CIFAR_CelebA/samples_mode0_99999.png?raw=true" width="250">
 </figure>
-
-</p>
 
 
 We clearly observe the benefit of updating pi as it makes each generator learn only one mode of the distribution. 
