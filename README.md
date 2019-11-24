@@ -16,14 +16,10 @@ Please refer to the README files on the respective folders on how to run the cod
 If you use this code for your research, please cite
 
 
-    @article{Balaji2019NW,
-      author    = {Yogesh Balaji and
-                   Rama Chellappa and
-                   Soheil Feizi},
-      title     = {Normalized Wasserstein Distance for Mixture Distributions with Applications
-                   in Adversarial Learning and Domain Adaptation},
-      journal   = {CoRR},
-      volume    = {abs/1902.00415},
-      year      = {2019},
-      url       = {http://arxiv.org/abs/1902.00415}
-    }
+    @InProceedings{Balaji_2019_ICCV,
+        author = {Balaji, Yogesh and Chellappa, Rama and Feizi, Soheil},
+        title = {Normalized Wasserstein for Mixture Distributions With Applications in Adversarial Learning and Domain Adaptation},
+        booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+        month = {October},
+        year = {2019}
+        }
